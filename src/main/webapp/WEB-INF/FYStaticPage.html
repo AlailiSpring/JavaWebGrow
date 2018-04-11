@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分页示例页面</title>
+    <style type="text/css">
+        .page-normal a {
+            border: 1px solid #ff9600;
+            padding: 5px 7px;
+            color: #ff9600;
+            text-decoration: none;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        /*...的颜色*/
+        .page-normal{
+            color: #ff9600;
+            text-align: center;
+            font-size: 0px;
+        }
+        .page-normal a:hover{
+            border: 1px solid #ff9600;
+            padding: 5px 7px;
+            color: #ff9600;
+            background-color: #ffbe94;
+        }
+        .page-normal .page-current {
+            border: 1px solid #ff9600;
+            padding: 5px 7px;
+            color: #ff9600;
+            background-color: #ffbe94;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        .page-normal .page-prev {
+            border: 1px solid #ffe3c6;
+            color: #ffe3c6;
+            padding: 5px 7px;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        .ellipsis {
+            border: none;
+            font-size: 14px;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+<!--行内元素中间有空隙导致产生间隔BUG问题
+    当内敛元素出现换行符和空格时，就会产生相应的间隙
+    解决方案：1、元素写成一行 2、设置font-size为0
+-->
+<div class="page-normal">
+    <span class="page-prev">上一页</span>
+    <span class="page-current">1</span>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <span class="ellipsis">...</span>
+    <a href="#">100</a>
+    <a href="#">下一页</a>
+</div>
+</body>
+</html>
